@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>评论管理</title>
+<style>
+:root{color-scheme:light dark;font:16px/1.6 system-ui,sans-serif}body{max-width:850px;margin:2rem auto;padding:0 1rem}input,textarea,button{font:inherit;padding:.5rem;border:1px solid #888;border-radius:4px}textarea{display:block;box-sizing:border-box;width:100%;min-height:6rem}button{cursor:pointer;margin:.25rem}article{border-top:1px solid #888;padding:1rem 0}p{white-space:pre-wrap;overflow-wrap:anywhere}.meta{font-size:.85rem;opacity:.8}#message{min-height:1.6em;color:#b44}[hidden]{display:none!important}form{margin:1rem 0}
+</style><script src="/admin.js" defer></script></head><body>
+<h1>评论管理</h1><p>管理公开评论、回复与迁移记录。</p><p id="message" role="status" aria-live="polite"></p>
+<form id="login"><label>管理员密码 <input name="password" type="password" autocomplete="current-password" required maxlength="1024"></label><button>登录</button></form>
+<section id="panel" hidden><button id="refresh">刷新</button><button id="logout">退出登录</button><p id="mail-status"></p><div id="comments"></div><button id="previous">上一页</button><button id="next">下一页</button></section>
+</body></html>

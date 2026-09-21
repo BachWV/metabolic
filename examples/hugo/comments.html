@@ -1,0 +1,26 @@
+{{ with .Site.Params.comments }}
+{{ if .enabled }}
+<link rel="stylesheet" href="{{ "css/comments.css" | relURL }}">
+<section id="blog-comments" class="blog-comments" data-api="{{ .apiURL }}" data-page="{{ $.RelPermalink }}" aria-label="评论区">
+  <h2>评论</h2>
+  <p class="bc-intro">留下想法，或接着聊聊。无需注册。</p>
+  <form class="bc-form">
+    <div class="bc-fields">
+      <label>昵称 <span aria-hidden="true">*</span><input name="nick" autocomplete="nickname" maxlength="60" required></label>
+      <label>邮箱（不公开）<input name="email" type="email" autocomplete="email" maxlength="254"></label>
+      <label>网址（选填）<input name="website" type="url" autocomplete="url" maxlength="2048" placeholder="https://"></label>
+    </div>
+    <label class="bc-trap" aria-hidden="true">Company<input name="company" tabindex="-1" autocomplete="off"></label>
+    <div class="bc-reply" hidden><span></span><button type="button">取消回复</button></div>
+    <label>评论 <span aria-hidden="true">*</span><textarea name="body" maxlength="5000" rows="4" required placeholder="支持纯文本和换行，最多 5000 字。"></textarea></label>
+    <p class="bc-note">评论将直接公开。邮箱选填，仅供博主管理，不发送回复通知。</p>
+    <button class="bc-submit" type="submit">发布评论</button>
+  </form>
+  <p class="bc-status" role="status" aria-live="polite"></p>
+  <div class="bc-list"></div>
+  <div class="bc-pagination"><button type="button" class="bc-prev" hidden>上一页</button><button type="button" class="bc-next" hidden>下一页</button></div>
+  <noscript>启用 JavaScript 后可查看和发布评论。</noscript>
+</section>
+<script src="{{ "js/comments.js" | relURL }}" defer></script>
+{{ end }}
+{{ end }}

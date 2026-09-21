@@ -1,0 +1,17 @@
+# Copy to an ignored private/config.yaml and replace the hash locally.
+bind: '127.0.0.1:8787'
+database: 'comments.sqlite3'
+origins:
+  - 'https://blog.example'
+  - 'https://comments.example'
+site_url: 'https://blog.example'
+password_hash: '<GENERATE_LOCALLY_WITH_HASH_PASSWORD>'
+cookie_secure: true
+proxy_mode: direct
+# Empty host disables delivery; notification jobs remain queued.
+smtp_host: ''
+smtp_port: 587
+smtp_user: ''
+smtp_password: ''
+mail_from: 'comments@example.com'
+mail_to: 'owner@example.com'

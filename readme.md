@@ -7,5 +7,3 @@ Rust + SQLite 评论系统，内置管理页与独立前端组件。
 3. 运行 `cargo run --release -- serve --config private/config.yaml`。
 
 管理入口：`/admin`。嵌入示例：`examples/embed.html`；Hugo 接入：`examples/hugo/comments.html`。
-
-仅使用 YAML 配置；数据库路径相对配置文件目录。私有配置勿提交。
